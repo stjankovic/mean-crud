@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-import {Router} from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-details',
@@ -33,7 +33,10 @@ export class DetailsComponent implements OnInit {
       result => console.log(result),
       err => console.error(err)
     )
-    this.rt.navigate(['/']);
+    setTimeout(() => {
+      this.rt.navigate(['/users']);
+    }, 1200)
+    
   }
 
 }

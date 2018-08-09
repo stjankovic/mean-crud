@@ -1,3 +1,30 @@
-<p>
-  add works!
-</p>
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h3>Add a new User</h3>
+                <form name="form" (ngSubmit)="f.form.valid && createUser()" #f="ngForm" novalidate>
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" class="form-control" name="fname" [(ngModel)]="model.fname" #fname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fname.invalid }" required />
+                        <div *ngIf="f.submitted && fname.invalid" class="invalid-feedback">
+                            <div *ngIf="fname.errors.required">First Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" class="form-control" name="lname" [(ngModel)]="model.lname" #lname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lname.invalid }" required />
+                        <div *ngIf="f.submitted && lname.invalid" class="invalid-feedback">
+                            <div *ngIf="lname.errors.required">Last Name is required</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
