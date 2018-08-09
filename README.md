@@ -1,5 +1,7 @@
 # MongoDB + ExpressJS + Angular6 + NodeJS
 
+![alt text](http://prntscr.com/kgjwpa)
+
 Welcome to my first MEAN project.
 My name is Stefan Jankovic and thanks for visiting
 
