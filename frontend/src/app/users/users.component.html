@@ -1,0 +1,12 @@
+<h1>Users <i class="material-icons display" routerLink="/users/add">person_add</i></h1>
+
+<ul>
+  <li *ngFor="let users of users$">
+    <a routerLink="/details/{{ users._id }}">
+      {{ users.fname }} {{ users.lname }}
+    </a>
+    <ul>
+        ID: {{ users._id }}
+    </ul>
+  </li>
+</ul>
