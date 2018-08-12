@@ -11,6 +11,7 @@ import { DetailsComponent } from './details/details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { AddComponent } from './add/add.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AddComponent } from './add/add.component';
     UsersComponent,
     DetailsComponent,
     HomeComponent,
-    AddComponent
+    AddComponent,
+    UpdateComponent
   ],
   imports: [
     FormsModule,
