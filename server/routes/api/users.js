@@ -61,4 +61,18 @@ router.delete('/:id', (req, res) => {
         })        
 });
 
+// UPDATE api/users, Change firstname
+router.put('/:id', function (req, res) {
+    User
+        .findByIdAndUpdate(req.params.id, {
+            fname: req.body.fname,
+            lname: req.body.lname
+        })
+        .then(user => {
+            console.log(`Updating user ${user.id}`);
+            res.json(user)
+        })
+        
+});
+
 module.exports = router;

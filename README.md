@@ -30,7 +30,6 @@ To start the frontend
 # Versions
 
 Angular
-   
 >6.1.0     
 
 Express
