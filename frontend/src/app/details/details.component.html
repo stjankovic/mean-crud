@@ -1,4 +1,7 @@
+
 <h1>{{ user$._id }}</h1>
+
+<mat-progress-bar *ngIf="vis" mode="buffer"></mat-progress-bar>
 
 <ul>
   <li><strong>First name:</strong>  {{ user$.fname }}</li>
@@ -6,3 +9,4 @@
 </ul>
 
 <i class="material-icons display" (click)="delUser()">delete</i>
+<i class="material-icons display" (click)="delUser()">build</i>

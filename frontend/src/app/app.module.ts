@@ -11,7 +11,11 @@ import { DetailsComponent } from './details/details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { AddComponent } from './add/add.component';
-import { UpdateComponent } from './update/update.component';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+
 
 @NgModule({
   declarations: [
@@ -20,14 +24,15 @@ import { UpdateComponent } from './update/update.component';
     UsersComponent,
     DetailsComponent,
     HomeComponent,
-    AddComponent,
-    UpdateComponent
+    AddComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

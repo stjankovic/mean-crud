@@ -4,6 +4,7 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <h3>Add a new User</h3>
+                <mat-progress-bar *ngIf="vis" mode="buffer"></mat-progress-bar>
                 <form name="form" (ngSubmit)="f.form.valid && createUser()" #f="ngForm" novalidate>
                     <div class="form-group">
                         <label for="fname">First Name</label>
