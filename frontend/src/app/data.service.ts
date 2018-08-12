@@ -23,8 +23,8 @@ export class DataService {
     return this.http.delete('http://localhost:5000/api/users/'+userId)
   }
 
-  addUser(article: any): Observable<any> {
-    return this.http.post<any>('http://localhost:5000/api/users/', article);
+  addUser(user: any): Observable<any> {
+    return this.http.post<any>('http://localhost:5000/api/users/', user);
   } 
 
 }
