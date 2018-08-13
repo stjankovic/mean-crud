@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
             res.json(users)
             console.log('Getting all users')
         })
-        console.log('Testing something out')
 });
 
 // GET api/users/:id, GET one USER, Public

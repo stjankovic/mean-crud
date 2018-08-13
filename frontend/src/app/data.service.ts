@@ -25,6 +25,10 @@ export class DataService {
 
   addUser(user: any): Observable<any> {
     return this.http.post<any>('http://localhost:5000/api/users/', user);
-  } 
+  }
+
+  updateUser(userId, user: any): Observable<any> {
+    return this.http.put('http://localhost:5000/api/users/'+userId, user)
+  }
 
 }

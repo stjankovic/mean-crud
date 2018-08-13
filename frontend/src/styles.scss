@@ -7,7 +7,16 @@ body {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
 }
-
+.blue {
+    color:#00A8FF;
+}
+.material-icons {
+    &.blue {
+        &:hover {
+            color: black;
+        }
+    }
+}
 #container {
    display: grid;
    grid-template-columns: 70px auto;

@@ -1,12 +1,31 @@
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-8 offset-md-2">
+              <h3>{{ user$._id }}</h3>
+              <mat-progress-bar *ngIf="vis" mode="buffer"></mat-progress-bar>
+              <form name="form" (ngSubmit)="f.form.valid && patchUser()" #f="ngForm" novalidate>
+                  <div class="form-group">
+                      <label for="fname"> First Name: <span class="blue">{{ this.firstname || this.user$.fname }}</span></label>
+                      <input type="text" placeholder="" class="form-control" *ngIf="togvis" name="fname" [(ngModel)]="model.fname" #fname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fname.invalid }" required />
 
-<h1>{{ user$._id }}</h1>
+                  </div>
+                  <div class="form-group">
+                    <label for="fname"> Last Name: <span class="blue">{{ this.lastname || this.user$.lname }}</span></label>
+                      <input type="text" class="form-control" *ngIf="togvis" name="lname" [(ngModel)]="model.lname" #lname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lname.invalid }" required />
 
-<mat-progress-bar *ngIf="vis" mode="buffer"></mat-progress-bar>
+                  </div>
+                  
+                  <div class="form-group" *ngIf="togvis">
+                      <button class="btn btn-primary">Update</button>
+                  </div>
+              </form>
+          </div>
+          
+      </div>
 
-<ul>
-  <li><strong>First name:</strong>  {{ user$.fname }}</li>
-  <li><strong>Last name:</strong>  {{ user$.lname }}</li>
-</ul>
-
-<i class="material-icons display" (click)="delUser()">delete</i>
-<i class="material-icons display" (click)="delUser()">build</i>
+      <i class="material-icons blue" (click)="delUser()">delete</i>
+      <i class="material-icons blue" (click)="toggleUpdate()">build</i>
+      
+  </div>
+</div>
