@@ -5,10 +5,6 @@ import { DataService } from '../data.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from "@angular/router";
 
-
-
-
-
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -45,7 +41,7 @@ export class DetailsComponent implements OnInit {
     )
     setTimeout(() => {
       this.rt.navigate(['/users']);
-    }, 1200)
+    }, 1400)
   }
 
   patchUser() {
@@ -56,7 +52,7 @@ export class DetailsComponent implements OnInit {
       this.togvis = false;
       this.vis = false;
       this.rt.navigate(['/users']);
-    }, 1200)
+    }, 1400)
   }
 
   toggleUpdate() {
