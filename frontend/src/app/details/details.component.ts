@@ -14,10 +14,11 @@ import { Router } from "@angular/router";
 export class DetailsComponent implements OnInit {
 
   model: any = {};
-  user$: Object;
+  user$: any;
   pathid: String;
   vis: Boolean = false;
   togvis: Boolean = false;
+  
 
   constructor(private data: DataService, private route: ActivatedRoute, private rt: Router) { 
     this.route.params.subscribe( params => this.user$ = params.id)

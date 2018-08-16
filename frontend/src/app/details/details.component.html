@@ -6,12 +6,12 @@
               <mat-progress-bar *ngIf="vis" mode="buffer"></mat-progress-bar>
               <form name="form" (ngSubmit)="f.form.valid && patchUser()" #f="ngForm" novalidate>
                   <div class="form-group">
-                      <label for="fname"> First Name: <span class="blue">{{ this.firstname || this.user$.fname }}</span></label>
+                      <label for="fname"> First Name: <span class="blue">{{ this.user$.fname }}</span></label>
                       <input type="text" placeholder="" class="form-control" *ngIf="togvis" name="fname" [(ngModel)]="model.fname" #fname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && fname.invalid }" required />
 
                   </div>
                   <div class="form-group">
-                    <label for="fname"> Last Name: <span class="blue">{{ this.lastname || this.user$.lname }}</span></label>
+                    <label for="fname"> Last Name: <span class="blue">{{ this.user$.lname }}</span></label>
                       <input type="text" class="form-control" *ngIf="togvis" name="lname" [(ngModel)]="model.lname" #lname="ngModel" [ngClass]="{ 'is-invalid': f.submitted && lname.invalid }" required />
 
                   </div>

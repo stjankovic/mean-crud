@@ -12,23 +12,23 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    return this.http.get('http://localhost:5000/api/users/')
+    return this.http.get('https://whispering-beyond-31054.herokuapp.com/api/users/')
   }
 
   getUser(userId) {
-    return this.http.get('http://localhost:5000/api/users/'+userId)
+    return this.http.get('https://whispering-beyond-31054.herokuapp.com/api/users/'+userId)
   }
 
   deleteUser(userId) {
-    return this.http.delete('http://localhost:5000/api/users/'+userId)
+    return this.http.delete('https://whispering-beyond-31054.herokuapp.com/api/users/'+userId)
   }
 
   addUser(user: any): Observable<any> {
-    return this.http.post<any>('http://localhost:5000/api/users/', user);
+    return this.http.post<any>('https://whispering-beyond-31054.herokuapp.com/api/users/', user);
   }
 
   updateUser(userId, user: any): Observable<any> {
-    return this.http.put('http://localhost:5000/api/users/'+userId, user)
+    return this.http.put('https://whispering-beyond-31054.herokuapp.com/api/users/'+userId, user)
   }
 
 }
